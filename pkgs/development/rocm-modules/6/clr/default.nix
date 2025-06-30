@@ -124,12 +124,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [
     ./cmake-find-x11-libgl.patch
+    ./0001-handle-v1-of-compressed-fatbins.patch
 
-    (fetchpatch {
-      # Fix handling of old fatbin version https://github.com/ROCm/clr/issues/99
-      sha256 = "sha256-CK/QwgWJQEruiG4DqetF9YM0VEWpSiUMxAf1gGdJkuA=";
-      url = "https://src.fedoraproject.org/rpms/rocclr/raw/rawhide/f/0001-handle-v1-of-compressed-fatbins.patch";
-    })
     (fetchpatch {
       # improve rocclr isa compatibility check
       sha256 = "sha256-wUrhpYN68AbEXeFU5f366C6peqHyq25kujJXY/bBJMs=";
