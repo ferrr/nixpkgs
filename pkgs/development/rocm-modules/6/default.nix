@@ -150,8 +150,8 @@ let
       };
 
       rocblas = self.callPackage ./rocblas {
-        buildTests = true;
-        buildBenchmarks = true;
+        buildTests = false;
+        buildBenchmarks = false;
       };
 
       rocsolver = self.callPackage ./rocsolver { };
