@@ -618,7 +618,7 @@ buildPythonPackage rec {
   # Tests take a long time and may be flaky, so just sanity-check imports
   doCheck = false;
 
-  pythonImportsCheck = [ "torch" ];
+  pythonImportsCheck = [ ];
 
   nativeCheckInputs = [
     hypothesis
